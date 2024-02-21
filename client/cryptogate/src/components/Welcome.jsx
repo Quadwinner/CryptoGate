@@ -23,6 +23,12 @@ const Input = ({Placeholder,name, type,value,handleChange}) =>(
 );
 
 const Welcome =() => {
+  const ConnectWallet = () => {
+
+  }
+  const handleSubmit =() =>{
+
+  }
   return(
       <div className="flex w-full justify-center items-center">
         <div className="flex mf:flex-row flex-col items-start justify-between md:p-20 py-12 px-4" >
@@ -83,13 +89,28 @@ const Welcome =() => {
             </div>
             <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
             <Input Placeholder="Address To "nmae="addressTo" type="text"handleChange={() =>{}}/>
+            <Input Placeholder="Amount (ETH) "nmae="amount" type="number"handleChange={() =>{}}/>
+            <Input Placeholder="Keyword (gif)"nmae="keyword" type="text"handleChange={() =>{}}/>
+            <Input Placeholder="Enter Message "nmae="message" type="text"handleChange={() =>{}}/>
+
+            <div className="h-[1px] w-full bg-gray-400 my-2" />
+            
+            {true ? (
+               <Loader />
+             ) : (
+                <button
+                  type="button"
+                  onClick={handleSubmit}
+                  className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] hover:bg-[#3d4f7c] rounded-full cursor-pointer"
+                >
+                  Send now
+                </button>
+              )}
+
+            
             </div>
-
           </div>
-
-
         </div>
-
       </div>
   );
 }

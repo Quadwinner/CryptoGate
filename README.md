@@ -1,4 +1,4 @@
 "# CryptoGate" 
 still in progress
 
-still in work
+still in work/ll
