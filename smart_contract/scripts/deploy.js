@@ -3,7 +3,7 @@ const main = async () => {
   const transactionsContract = await Transactions.deploy();
 
   // Wait for the transaction to be mined
-  await transactionsContract.deployTransaction.wait();
+  await hre.ethers.provider.waitForTransaction(transactionsContract.deployTransaction.hash);
 
   console.log("Transactions deployed to: ", transactionsContract.address);
 };
